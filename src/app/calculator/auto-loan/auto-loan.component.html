@@ -1,0 +1,35 @@
+<form [formGroup]="autoLoanForm">
+  <div class="ui-inputgroup">
+    <span class="ui-inputgroup-addon">$</span>
+    <input type="number" pInputText placeholder="Price" formControlName="autoPrice">
+  </div>
+  <div class="ui-inputgroup">
+    <input type="number" pInputText formControlName="loanTerm" placeholder="Loan Term">
+    <span class="ui-inputgroup-addon">months</span>
+  </div>
+  <div class="ui-inputgroup">
+    <input type="number" pInputText placeholder="Interest Rate" formControlName="interestRate">
+    <span class="ui-inputgroup-addon">%</span>
+  </div>
+  <div class="ui-inputgroup">
+    <span class="ui-inputgroup-addon">$</span>
+    <input type="number" pInputText placeholder="Down Payment" formControlName="downPayment">
+  </div>
+  <div class="ui-inputgroup">
+    <span class="ui-inputgroup-addon">$</span>
+    <input type="number" pInputText placeholder="Trade-In Value" formControlName="tradeInValue">
+  </div>
+  <p-dropdown [options]="states" formControlName="state"></p-dropdown>
+  <div class="ui-inputgroup">
+    <input type="number" pInputText placeholder="Sales Tax" formControlName="salesTax">
+    <span class="ui-inputgroup-addon">%</span>
+  </div>
+  <div class="ui-inputgroup">
+    <span class="ui-inputgroup-addon">$</span>
+    <input type="number" pInputText placeholder="Title, Registration, and Other Fees" formControlName="fees">
+  </div>
+</form>
+
+<p>
+  Value: {{ getValue() }}
+</p>
